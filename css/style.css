@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(77, 235, 4);
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+#app {
+    background-color: orange;
+    padding: 3.125rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 30%;
+    margin: .625rem;
+}
+
+
+.done {
+    opacity: 0.5;
+}
+
+.done-text {
+    text-decoration: line-through;
+}
+
+.remove-button {
+    color: red;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}

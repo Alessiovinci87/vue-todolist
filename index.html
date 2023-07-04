@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,29 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Vue To Do List</title>
 </head>
+
 <body>
-    
+    <div id="app">
+        <img src="todo.jpg" alt="">
+        <div>
+            <input type="text" v-model="newTodoText" placeholder="Aggiungi un nuovo todo">
+            <button @click="addTodo">Aggiungi</button>
+        </div>
+        <ul>
+            <li v-for="todo in todos" :key="todo.id" :class="{ done: todo.done }">
+                <span :class="{ 'done-text': todo.done }">
+                    {{ todo.text }}
+                </span>
+                <button class="remove-button" @click="removeTodo(todo.id)">x</button>
+            </li>
+        </ul>
+    </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/scripts.js"></script>
 
 </body>
+
 </html>
